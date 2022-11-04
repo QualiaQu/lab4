@@ -5,7 +5,6 @@ public static class Helper
     internal static void PrintArray(int[] arr)
     {
         Console.Write("[");
-        // Console.Write(string.Join(", ", arr));
         string? result = null;
         foreach (var elem in arr)
         {
@@ -47,6 +46,7 @@ public static class Helper
                 Console.Write(arr[i]);
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.Write(", ");
+                continue;
             }
             if (i == index2)
             {
@@ -54,6 +54,7 @@ public static class Helper
                 Console.Write(arr[i]);
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.Write(", ");
+                
             }
             else
             {
@@ -76,5 +77,38 @@ public static class Helper
         }
 
         return arr;
+    }
+
+    public static void PrintWithHighlightLeftRight(int[] arr, int index)
+    {
+        Console.Write("[");
+        for (int i = 0; i < arr.Length; i++)
+        {
+            if (i < index)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write(arr[i]);
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.Write(", ");
+                continue;
+            }
+            if (i == index)
+            {
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.Write(arr[i]);
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.Write(", ");
+            }
+            if (i > index)
+            {
+                Console.ForegroundColor = ConsoleColor.Blue;
+                Console.Write(arr[i]);
+                Console.ForegroundColor = ConsoleColor.Black;
+                Console.Write(", ");
+            }
+        }
+        Console.Write("\b\b");
+        Console.Write("]");
+        Console.Write("\n");
     }
 }
