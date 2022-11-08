@@ -4,7 +4,11 @@ static class Program
 {
     static void Main()
     {
-        FirstTask.Demonstration();
-        //ThirdTask.DoAbcSort();
+        //FirstTask.Demonstration();
+        //SecondTask.Demonstration();
+        ThirdTask.DemonstrationAbc();
+        //ThirdTask.DemonstrationBubble();
+        
+        Console.ReadKey();
     }
 }

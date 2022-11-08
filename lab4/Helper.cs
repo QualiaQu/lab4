@@ -23,7 +23,7 @@ public static class Helper
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write(arr[i]);
-                Console.ForegroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.Write(", ");
             }
             else
@@ -44,7 +44,7 @@ public static class Helper
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write(arr[i]);
-                Console.ForegroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.Write(", ");
                 continue;
             }
@@ -52,7 +52,7 @@ public static class Helper
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write(arr[i]);
-                Console.ForegroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.Write(", ");
                 
             }
@@ -88,7 +88,7 @@ public static class Helper
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write(arr[i]);
-                Console.ForegroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.Write(", ");
                 continue;
             }
@@ -96,19 +96,62 @@ public static class Helper
             {
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Write(arr[i]);
-                Console.ForegroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.Write(", ");
             }
             if (i > index)
             {
                 Console.ForegroundColor = ConsoleColor.Blue;
                 Console.Write(arr[i]);
-                Console.ForegroundColor = ConsoleColor.Black;
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.Write(", ");
             }
         }
         Console.Write("\b\b");
         Console.Write("]");
         Console.Write("\n");
+    }
+
+    internal static string PrintCountWords(List<string> sort)
+    {
+        string uniqueWords = "";
+        string result = string.Join(" ", sort);
+
+        string[] words1 = result.Split(new char[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+        var input = words1.GroupBy(x => x)
+            .Where(x => x.Any())
+            .Select(x => new { Word = x.Key, Frequency = x.Count() });
+        var enumerable = input.ToList();
+        uniqueWords += $"Количество уникальных слов: {enumerable.Count()}\n";
+        foreach (var item in enumerable)
+        {
+            string str = $"Слово: {item.Word}";
+            uniqueWords += (str.PadRight(25));
+            uniqueWords += ($"Количество повторов: {item.Frequency}\n");
+        }
+        return uniqueWords;
+    }
+
+    internal static void SaveResults(string results)
+    {
+        File.WriteAllText(Path.GetFullPath("./results100000.csv"), string.Empty);
+        File.AppendAllText(Path.GetFullPath("./results100000.csv"), results);
+    }
+
+    internal static void TimeListCleaning(List<double> timeList)
+    {
+        var min = timeList.Min();
+        for (var i = 0; i < timeList.Count; i++)
+        {
+            if (timeList[i] - min > 1.5)
+            {
+                timeList[i] = 0;
+            }
+        }
+    }
+
+    internal static int FindCount(List<double> timeList)
+    {
+        return timeList.Count(i => i != 0);
     }
 }

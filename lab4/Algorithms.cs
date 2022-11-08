@@ -62,7 +62,7 @@ public static class Algorithms
                 continue;
             }
             Console.WriteLine($"Меняем его с элементом {i} месте");
-            Helper.PrintWithHighlight(array,i,min);
+            Helper.PrintWithHighlight(array,min,i);
             foreach (var k in array)
             {
                 Console.Write(" ↓ ");
@@ -107,5 +107,19 @@ public static class Algorithms
         int pivot = Partition (array, start, end, time);
         QuickSort(array, start, pivot - 1, time);
         QuickSort(array, pivot + 1, end, time);
+    }
+    internal static List<string> BubbleSort(List<string> words)
+    {
+        for (int i = 0; i < words.Count; i++)
+        {
+            for (int j = i+1; j < words.Count; j++)
+            {
+                if (String.CompareOrdinal(words[i], words[j]) > 0)
+                {
+                    (words[i], words[j]) = (words[j], words[i]);
+                }
+            }
+        }
+        return words;
     }
 }

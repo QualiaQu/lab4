@@ -1,5 +1,4 @@
-﻿
-namespace lab4;
+﻿namespace lab4;
 
 public static class FirstTask
 {
@@ -23,7 +22,6 @@ public static class FirstTask
             Helper.PrintArray(arr);
             Console.WriteLine("Выберите сортировку:\n1 - сортировка выбором\n2 - быстрая сортировка\n");
             var sort = Console.ReadLine();
-            Console.Write("\b\b\b\b\b");
             switch (sort)
             {
                 case "1":
