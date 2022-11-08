@@ -4,9 +4,9 @@ static class Program
 {
     static void Main()
     {
-        //FirstTask.Demonstration();
+        FirstTask.Demonstration();
         //SecondTask.Demonstration();
-        ThirdTask.DemonstrationAbc();
+        //ThirdTask.DemonstrationAbc();
         //ThirdTask.DemonstrationBubble();
         
         Console.ReadKey();
