@@ -1,4 +1,6 @@
-﻿namespace lab4;
+﻿using Microsoft.VisualBasic;
+
+namespace lab4;
 
     enum ColumnType
     {
@@ -31,7 +33,7 @@
                 ColumnCount = file.ReadLine()!.Split(";").Length;
                 RowCount = File.ReadAllLines(path).Count() - 1;
                 Attributes = File.ReadLines(path).First().Split(";");
-                Types = ParseToType();
+                Types = ParseToType(path);
                 file.Close();
             }
             else
@@ -75,12 +77,13 @@
             return line!.Split(SeparatingSign);
         }
 
-        ColumnType[] ParseToType()
+        ColumnType[] ParseToType(string path)
         {
+            var line = File.ReadLines(path).Skip(1).First().Split(";");
             ColumnType[] output = new ColumnType[ColumnCount];
-            for (int i = 0; i < ColumnCount; i++)
+            for (var i = 0; i < line.Length; i++)
             {
-                if (i == 2 | i == 3)
+                if (int.TryParse(line[i], out var number))
                 {
                     output[i] = ColumnType.Integer;
                 }
@@ -89,6 +92,7 @@
                     output[i] = ColumnType.String;
                 }
             }
+
             return output;
         }
 
@@ -218,9 +222,7 @@
             file1.Close();
             file2.Close();
             originFile.Close();
-
-            table1.SetRowCount(RowCount / 2 + RowCount % 2);
-            table2.SetRowCount(RowCount / 2);
+            
         }
 
         private void SplitIntoTablesNaturally(string outputDirectoryPath, int checkedColumnNum, bool ascending)
@@ -231,7 +233,7 @@
             StreamReader originFile = new StreamReader(_filePath);
             
             string[] metadata = new string[2];
-            for (int i = 0; i < 2; i++)
+            for (int i = 0; i < 1; i++)
             {
                 metadata[i] = originFile.ReadLine()!;
             }
@@ -280,7 +282,6 @@
                 }
 
                 currentFile.Close();
-                tables[j].SetRowCount(rowCount);
                 j++;
             }
 
@@ -301,7 +302,6 @@
                 tables[i] = new TableWorker(inputPath[i]);
             }
 
-            TableWorker outputTable = new TableWorker(outputPath, tables[0], false);
             StreamReader[] files = new StreamReader[inputPath.Count];
 
             for (int i = 0; i < inputPath.Count; i++)
@@ -310,11 +310,15 @@
             }
 
             StreamWriter outputFile = new StreamWriter(outputPath);
-
-            for (int j = 0; j < 2; j++)
-            {
-                outputFile.WriteLine(files[0].ReadLine());
-            }
+            
+            
+            outputFile.WriteLine(files[0].ReadLine());
+            outputFile.WriteLine(files[0].ReadLine());
+            
+            // for (int j = 0; j < 2; j++)
+            // {
+            //     outputFile.WriteLine(files[0].ReadLine());
+            // }
             for (int i = 1; i < inputPath.Count; i++)
             {
                 for (int j = 0; j < 2; j++)
@@ -356,30 +360,20 @@
                 file.Close();
             outputFile.Close();
 
-            int totalRowCount = 0;
-            foreach (TableWorker table in tables)
-                totalRowCount += table.RowCount;
-            outputTable.SetRowCount(totalRowCount);
-
-            int GetMinOrMaxElementNum(Element[][] elements)
+            int GetMinOrMaxElementNum(Element[][] element)
             {
                 Element[] currentLine = null!;
                 int output = -1;
                 for (int i = 0; i < inputPath.Count; i++)
                 {
-                    if (elements[i] != null && (currentLine == null || (currentLine[columnNum].CompareTo(elements[i][columnNum]) == dir)))
+                    if (element[i] != null && (currentLine == null || currentLine[columnNum].CompareTo(element[i][columnNum]) == dir))
                     {
-                        currentLine = elements[i];
+                        currentLine = element[i];
                         output = i;
                     }
                 }
                 return output;
             }
-        }
-        void SetRowCount(int count)
-        {
-            RowCount = count;
-            RewriteLine(_filePath, 0, ColumnCount.ToString() + SeparatingSign + RowCount.ToString() + SeparatingSign);
         }
 
         public static TableWorker GetFilteredTable(TableWorker table, string outputPath, Condition condition)
@@ -410,8 +404,6 @@
 
             outputFile.Close();
             inputFile.Close();
-
-            outputTable.SetRowCount(j);
 
             return outputTable;
         }
