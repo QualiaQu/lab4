@@ -42,7 +42,7 @@ namespace lab4;
             }
         }
 
-        private TableWorker(string path, TableWorker cloneableTable, bool cloneData)
+        private TableWorker(string path, TableWorker cloneableTable)
         {
             _filePath = path;
             ColumnCount = cloneableTable.ColumnCount;
@@ -51,23 +51,12 @@ namespace lab4;
 
             StreamWriter newFile = new StreamWriter(path);
             StreamReader cloneableFile = new StreamReader(cloneableTable._filePath);
-
-            if (cloneData)
-                newFile.WriteLine(cloneableFile.ReadLine()); 
-            else
-            {
-                newFile.WriteLine(ParseLine(cloneableFile.ReadLine())[0] + SeparatingSign + "0" + SeparatingSign);
-            }
+            
+            newFile.WriteLine(ParseLine(cloneableFile.ReadLine())[0] + SeparatingSign + "0" + SeparatingSign);
+            
             newFile.WriteLine(cloneableFile.ReadLine());
             newFile.WriteLine(cloneableFile.ReadLine());
-
-            if (cloneData)
-            {
-                while (!cloneableFile.EndOfStream)
-                {
-                    newFile.WriteLine(cloneableFile.ReadLine()); 
-                }
-            }
+            
             newFile.Close();
             cloneableFile.Close();
         }
@@ -83,7 +72,7 @@ namespace lab4;
             ColumnType[] output = new ColumnType[ColumnCount];
             for (var i = 0; i < line.Length; i++)
             {
-                if (int.TryParse(line[i], out var number))
+                if (int.TryParse(line[i], out _))
                 {
                     output[i] = ColumnType.Integer;
                 }
@@ -121,6 +110,12 @@ namespace lab4;
             switch (sortType)
             {
                 case SortType.Direct:
+                    var dirInfo = new DirectoryInfo("temp");
+                    foreach (var file in dirInfo.GetFiles())
+                    {
+                        file.Delete();
+                    }
+                    
                     SubSortDirectly(outputPath, ascending, attributeNum, 0);
 
                     return new TableWorker(outputPath);
@@ -161,7 +156,7 @@ namespace lab4;
                     SplitIntoTablesNaturally(directoryPath, attributeNum, ascending);
                     MergeSortedTables(outputPath, Directory.GetFiles(directoryPath), attributeNum, ascending);
 
-                    return (new TableWorker(outputPath));
+                    return new TableWorker(outputPath);
                 }
                 default:
                     throw new Exception("Нереализованный тип сортировки");
@@ -191,23 +186,19 @@ namespace lab4;
             if (!File.Exists(outputPath2))
                 File.Delete(outputPath2);
 
-            TableWorker table1 = new TableWorker(outputPath1, this, false);
-            TableWorker table2 = new TableWorker(outputPath2, this, false);
+            TableWorker table1 = new TableWorker(outputPath1, this);
+            TableWorker table2 = new TableWorker(outputPath2, this);
 
             StreamWriter file1 = new StreamWriter(outputPath1);
             StreamWriter file2 = new StreamWriter(outputPath2);
             StreamReader originFile = new StreamReader(_filePath);
-
-            for (int i = 0; i < 3; i++)
-            {
-                string line = originFile.ReadLine()!;
-                file1.WriteLine(line);
-                file2.WriteLine(line);
-            }
-
+            string? att = originFile.ReadLine();
+            file1.WriteLine(att);
+            file2.WriteLine(att);
             int j = 0;
             while (!originFile.EndOfStream)
             {
+                
                 if (j % 2 == 0)
                 {
                     file1.WriteLine(originFile.ReadLine());
@@ -223,6 +214,8 @@ namespace lab4;
             file2.Close();
             originFile.Close();
             
+            table1.RowCount = RowCount / 2 + RowCount % 2;
+            table2.RowCount = RowCount / 2;
         }
 
         private void SplitIntoTablesNaturally(string outputDirectoryPath, int checkedColumnNum, bool ascending)
@@ -231,11 +224,11 @@ namespace lab4;
             List<TableWorker> tables = new List<TableWorker>();
 
             StreamReader originFile = new StreamReader(_filePath);
-            
-            string[] metadata = new string[2];
-            for (int i = 0; i < 1; i++)
+
+            string?[] metadata = new string?[3];
+            for (int i = 0; i < 3; i++)
             {
-                metadata[i] = originFile.ReadLine()!;
+                metadata[i] = originFile.ReadLine();
             }
 
             if (Directory.Exists(outputDirectoryPath))
@@ -249,11 +242,11 @@ namespace lab4;
             {
                 string path = outputDirectoryPath + @"\temp_" + j + ".txt";
                 Console.WriteLine($"Создаем файл {path} и вставляем в него идущие подряд отсортированные элементы");
-                tables.Add(new TableWorker(path, this, false));
+                tables.Add(new TableWorker(path, this));
                 var currentFile = new StreamWriter(path);
                 int rowCount = 0;
 
-                foreach (string line in metadata)
+                foreach (string? line in metadata)
                     currentFile.WriteLine(line);
 
                 while (true)
@@ -282,6 +275,8 @@ namespace lab4;
                 }
 
                 currentFile.Close();
+                tables[j].RowCount = rowCount;
+                
                 j++;
             }
 
@@ -306,22 +301,17 @@ namespace lab4;
 
             for (int i = 0; i < inputPath.Count; i++)
             {
-                files[i] = new StreamReader(inputPath[i]);
+                files[i] = new StreamReader(inputPath[i]);  
             }
 
             StreamWriter outputFile = new StreamWriter(outputPath);
-            
+
             
             outputFile.WriteLine(files[0].ReadLine());
-            outputFile.WriteLine(files[0].ReadLine());
             
-            // for (int j = 0; j < 2; j++)
-            // {
-            //     outputFile.WriteLine(files[0].ReadLine());
-            // }
             for (int i = 1; i < inputPath.Count; i++)
             {
-                for (int j = 0; j < 2; j++)
+                for (int j = 0; j < 1; j++)
                 {
                     files[i].ReadLine();
                 }
@@ -376,21 +366,19 @@ namespace lab4;
             }
         }
 
-        public static TableWorker GetFilteredTable(TableWorker table, string outputPath, Condition condition)
+        public static void GetFilteredTable(TableWorker table, string outputPath, Condition condition)
         {
             if (File.Exists(outputPath))
                 File.Delete(outputPath);
 
-            TableWorker outputTable = new TableWorker(outputPath, table, false);
+            TableWorker outputTable = new TableWorker(outputPath, table);
 
             StreamWriter outputFile = new StreamWriter(outputPath);
             StreamReader inputFile = new StreamReader(table._filePath);
 
-            for (int i = 0; i < 3; i++)
-            {
-                outputFile.WriteLine(inputFile.ReadLine());
-            }
-            int j = 0;
+            
+            outputFile.WriteLine(inputFile.ReadLine());
+
             while (!inputFile.EndOfStream)
             {
                 string? line = inputFile.ReadLine();
@@ -398,32 +386,10 @@ namespace lab4;
                 if (condition.Satisfies(elements))
                 {
                     outputFile.WriteLine(line);
-                    j++;
                 }
             }
 
             outputFile.Close();
             inputFile.Close();
-
-            return outputTable;
         }
-
-        private static void RewriteLine(string path, int lineIndex, string newValue)
-        {
-            int i = 0;
-            string tempPath = path + ".tmp";
-            using (StreamReader sr = new StreamReader(path))
-            using (StreamWriter sw = new StreamWriter(tempPath))
-            {
-                while (!sr.EndOfStream)
-                {
-                    string line = sr.ReadLine()!;
-                    sw.WriteLine(lineIndex == i ? newValue : line);
-                    i++;
-                }
-            }
-            File.Delete(path);
-            File.Move(tempPath, path);
-        }
-        
     }

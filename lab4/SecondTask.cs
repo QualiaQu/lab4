@@ -17,8 +17,10 @@ public static class SecondTask
         Condition condition = Ui.AskCondition(inputTable);
 
         if (condition != null)
-            inputTable = TableWorker.GetFilteredTable(inputTable, "temp.txt", condition);
-
+        {
+            TableWorker.GetFilteredTable(inputTable, "temp.csv", condition);
+            inputTable = new TableWorker("temp" + ".csv");
+        }
         inputTable.GetSortedTable(outputFile, ascending, attributeName, sortType);
     }
 }

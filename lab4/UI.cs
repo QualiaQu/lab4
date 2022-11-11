@@ -26,7 +26,7 @@ static class Ui
                 string textOfFunction = Console.ReadLine()!;
 
                 string[] words = ParseLine(textOfFunction);
-                IComparable operand = GetOpernd(words[2]);
+                IComparable operand = GetOperand(words[2]);
 
                 ConditionDelegate function = GetFunction(words[1], operand);
 
@@ -39,7 +39,7 @@ static class Ui
             {
                 return line.Split(); 
             }
-            IComparable GetOpernd(string operand)
+            IComparable GetOperand(string operand)
             {
                 if (int.TryParse(operand, out int result))
                     return result;
