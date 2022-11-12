@@ -95,7 +95,22 @@ namespace lab4;
             return output;
         }
 
-        
+        void DirOperation()
+        {
+            var dirInfo = new DirectoryInfo("temp");
+            if(dirInfo.Exists)
+            {
+                foreach (var file in dirInfo.GetFiles())
+                {
+                    file.Delete();
+                }
+            }
+            else
+            {
+                Directory.CreateDirectory("temp");
+            }
+        }
+         
         public TableWorker GetSortedTable(string outputPath, bool ascending, string? attribute, SortType sortType, int time)
         {
             int attributeNum = -1;
@@ -110,12 +125,7 @@ namespace lab4;
             switch (sortType)
             {
                 case SortType.Direct:
-                    var dirInfo = new DirectoryInfo("temp");
-                    foreach (var file in dirInfo.GetFiles())
-                    {
-                        file.Delete();
-                    }
-                    
+                    DirOperation();
                     SubSortDirectly(outputPath, ascending, attributeNum, 0,time);
                     
                     return new TableWorker(outputPath);
