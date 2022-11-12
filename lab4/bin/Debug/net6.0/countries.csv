@@ -1,0 +1,279 @@
+﻿Country;Capital;Square;Population;Continent
+Abkhazia;Sukhum;8600;243564;Asia
+Australia;Canberra;7686850;24238610;Australia and Oceania
+Austria;Vienna;83858;8741753;Europe
+Azerbaijan;Baku;86600;9705600;Asia
+Albania;Tyrant;28748;2866026;Europe
+Algeria;Algeria;2381740;39813722;Africa
+Angola;Luanda;1246700;25831000;Africa
+Andorra;Andorra la Vella;468;78014;Europe
+Antigua and Barbuda;St. John's;442;93581;North America
+Argentina;Buenos Aires;2766890;43847000;South America
+Armenia;Yerevan;29741;2995100;Asia
+Afghanistan;Kabul;647500;29822848;Asia
+The Bahamas;Nassau;13940;393000;North America
+Bangladesh;Dhaka;144000;160221000;Asia
+Barbados;Bridgetown;430;291495;North America
+Bahrain;Manama;701;1397000;Asia
+Belize;Belmopan;22966;377968;North America
+Belarus;Minsk;207595;9498400;Europe
+Belgium;Brussels;30528;11250585;Europe
+Benin;Porto Novo;112620;11167000;Africa
+Bulgaria;Sophia;110910;7153784;Europe
+Bolivia;Sucre;1098580;10985059;South America
+Bosnia and Herzegovina;Sarajevo;51129;3802000;Europe
+Botswana;Gaborone;600370;2209208;Africa
+Brazil;Brasilia;8511965;206081432;South America
+Brunei;Bandar Seri Begawan;5770;436620;Asia
+Burkina Faso;Ouagadougou;274200;19034397;Africa
+Burundi;Gitega;27830;11099298;Africa
+Bhutan;Thimphu;47000;784000;Asia
+Vanuatu;Port Vila;12200;289700;Australia and Oceania
+Vatican City;Vatican City;0;842;Europe
+Great Britain;London;24482065;341183;Europe
+Hungary;Budapest;93030;9830485;Europe
+Venezuela;Caracas;912050;31028637;South America
+East Timor;Dili;14874;1167242;Asia
+Vietnam;Hanoi;329560;91713300;Asia
+Gabon;Libreville;267667;1811079;Africa
+Haiti;Port-au-Prince;27750;10911819;North America
+Guyana;Georgetown;214970;741962;South America
+Gambia;Banjul;11300;2025527;Africa
+Ghana;Accra;238540;28308301;Africa
+Guatemala;Guatemala;108890;16555556;North America
+Guinea;Conakry;245857;10628972;Africa
+Guinea-Bissau;Bissau;36120;1547754;Africa
+Germany;Berlin;357021;82175684;Europe
+Honduras;Tegucigalpa;112090;8721014;North America
+State of Palestine;Jerusalem (Ramallah);6020;4816503;Asia
+Grenada;St. Georges;340;110566;North America
+Greece;Athens;131940;10793526;Europe
+Georgia;Tbilisi;69700;3720400;Asia
+Denmark;Copenhagen;43094;5707251;Europe
+Djibouti;Djibouti;22000;890179;Africa
+Dominika;Roseau;754;69393;North America
+Dominican Republic;Santo Domingo;48730;10075045;North America
+DR Congo;Kinshasa;2345410;85026000;Africa
+Egypt;Cairo;1001450;91701723;Africa
+Zambia;Lusaka;752614;16717000;Africa
+Zimbabwe;Harare;390580;15967000;Africa
+Israel;Jerusalem;22072;8585000;Asia
+India;New Delhi;3287590;1268961000;Asia
+Indonesia;Jakarta;1904556;255461700;Asia
+Jordan;Amman;89400;9813095;Asia
+Iraq;Baghdad;437072;37883543;Asia
+Iran;Tehran;1648000;80840713;Asia
+Irish;Dublin;70273;4658530;Europe
+Iceland;Reykjavik;103000;332529;Europe
+Spain;Madrid;497304;46438422;Europe
+Italy;Rome;301340;60665551;Europe
+Yemen;Sana;527970;27478000;Asia
+Cape Verde;Praya;4033;538535;Africa
+Kazakhstan;Nur-Sultan;2724900;17753200;Asia
+Cambodia;Phnom Penh;181040;15827000;Asia
+Cameroon;Yaunde;475440;23924000;Africa
+Canada;Ottawa;9976139;36286425;North America
+Qatar;Doha;11437;2553393;Asia
+Kenya;Nairobi;582650;44156577;Africa
+Cyprus;Nicosia;9250;848319;Asia
+Kyrgyzstan;Bishkek;198500;6019500;Asia
+Kiribati;South Tarawa;717;109693;Australia and Oceania
+China;Beijing;9640821;1410549741;Asia
+North KOREA;Pyongyang;120540;25281000;Asia
+Colombia;Bogota;1138910;48892070;South America
+Comoros;Moroni;2235;806153;Africa
+Costa Rica;San Jose;51100;4890379;North America
+Ivory Coast;Yamoussoukro;322460;23254000;Africa
+Cuba;Havana;110860;11236348;North America
+Kuwait;Kuwait City;17820;4330308;Asia
+Laos;Vientiane;236800;6492400;Asia
+Latvia;Riga;64589;1968957;Europe
+Lesotho;Maseru;30355;2160000;Africa
+Liberia;Monrovia;111370;4001855;Africa
+Lebanon;Beirut;10452;5988000;Asia
+Libya;Tripoli;1759540;6244174;Africa
+Lithuania;Vilnius;65200;2888558;Europe
+Liechtenstein;Vaduz;160;37662;Europe
+Luxembourg;Luxembourg;2586;576249;Europe
+Mauritius;Port Louis;2040;1263747;Africa
+Mauritania;Nouakchott;1030700;3537368;Africa
+Madagascar;Antananarivo;587040;24430325;Africa
+Malawi;Lilongwe;118480;17377468;Africa
+Malaysia;Kuala Lumpur;329750;31790277;Asia
+Mali;Bamako;1240000;18135000;Africa
+Maldives;Male;300;402071;Asia
+Malta;Valletta;316;434403;Europe
+Morocco;Rabat;446550;34817000;Africa
+Marshall Islands;Majuro;181;55717;Australia and Oceania
+Mexico;Mexico City;1972550;122273473;North America
+Mozambique;Maputo;801590;26423623;Africa
+Moldova;Chisinau;33846;3553056;Europe
+Monaco;Monaco;2;38400;Europe
+Mongolia;Ulaanbaatar;1564116;3081677;Asia
+Myanmar;Naypyidaw;678500;51419420;Asia
+Namibia;Windhoek;825418;2436469;Africa
+Nauru;-;21;10800;Australia and Oceania
+Nepal;Kathmandu;140800;28431494;Asia
+Niger;Niamey;1267000;20715000;Africa
+Nigeria;Abuja;923768;186988000;Africa
+Netherlands;Amsterdam;41526;16979120;Europe
+Nicaragua;Managua;129494;6262703;North America
+New Zealand;Wellington;268680;4722321;Australia and Oceania
+Norway;Oslo;385186;5213985;Europe
+UAE;Abu Dhabi;82880;9267000;Asia
+Oman;Muscat;309500;4523401;Asia
+Pakistan;Islamabad;881913;196174380;Asia
+Palau;Ngerulmud;458;17661;Australia and Oceania
+Panama hat;Panama hat;78200;4037043;North America
+Papua New Guinea;Port Moresby;463840;8151300;Australia and Oceania
+Paraguay;Asuncion;406750;6854536;South America
+Peru;Lima;1285220;31488625;South America
+Poland;Warsaw;312685;37967209;Europe
+Portugal;Lisbon;92082;10341330;Europe
+Republic of the Congo;Brazzaville;342000;4741000;Africa
+Republic of Korea;Seoul;98480;51664244;Asia
+Russia;Moscow;17102345;146544700;Europe
+Rwanda;Kigali;26338;11533446;Africa
+Romania;Bucharest;237500;19759968;Europe
+El Salvador;San Salvador;21040;6460271;North America
+Samoa;Apia;2860;194899;Australia and Oceania
+San Marino;San Marino;61;33005;Europe
+Sao Tome and Principe;Sao Tome;1001;194000;Africa
+Saudi Arabia;Riyadh;2218000;31015999;Asia
+Northern Macedonia;Skopje;25333;2071278;Europe
+Seychelles;Victoria;455;93186;Africa
+Senegal;Dakar;196190;14799859;Africa
+Saint Vincent and the Grenadines;Kingstown;389;110255;North America
+Saint Kitts and Nevis;Buster;261;52329;North America
+Saint Lucia;Castries;620;172818;North America
+Serbia;Belgrade;88361;9846582;Europe
+Singapore;Singapore;714;5607300;Asia
+Syria;Damascus;185180;17185170;Asia
+Slovakia;Bratislava;48845;5426252;Europe
+Slovenia;Ljubljana;20253;2064188;Europe
+Solomon Islands;Honiara;28450;651700;Australia and Oceania
+Somalia;Mogadishu;637657;12316895;Africa
+Sudan;Khartoum;1886068;41176000;Africa
+Suriname;Paramaribo;163270;558773;South America
+USA;Washington;9522057;322762018;North America
+Sierra Leone;Freetown;71740;7075641;Africa
+Tadjikistan;Dushanbe;143100;8551000;Asia
+Thailand;Bangkok;514000;68147000;Asia
+Tanzania;Dodoma;948087;50142938;Africa
+Togo;Scrap;56785;7143000;Africa
+Tonga;Nukualofa;748;106440;Australia and Oceania
+Trinidad and Tobago;Port of Spain;5128;1349667;North America
+Tuvalu;Funafuti;26;10782;Australia and Oceania
+Tunisia;Tunisia;163610;11154372;Africa
+Turkmenistan;Ashgabat;491200;5439000;Asia
+Turkey;Ankara;780580;78741053;Asia
+Uganda;Kampala;236040;36860700;Africa
+Uzbekistan;Tashkent;447400;31807000;Asia
+Ukraine;Kyiv;576604;42650186;Europe
+Uruguay;Montevideo;176220;3480222;South America
+Federated States of Micronesia;Palikir;702;105681;Australia and Oceania
+Fiji;Suva;18270;903207;Australia and Oceania
+Philippines;Manila;300000;102980480;Asia
+Finland;Helsinki;337030;5487308;Europe
+France;Paris;547030;64513242;Europe
+Croatia;Zagreb;56542;4190669;Europe
+TSAR;Bangi;622984;5277959;Africa
+Chad;N 'Djamena;1284000;14497000;Africa
+Montenegro;Podgorica;14026;622218;Europe
+Czech;Prague;78866;10553843;Europe
+Chile;Santiago;756950;18006407;South America
+Switzerland;Bern;41290;8325194;Europe
+Sweden;Stockholm;449964;9851017;Europe
+Sri Lanka;Sri Jayawardenepura-Kotte;65610;21866445;Asia
+Ecuador;Quito;283560;16599593;South America
+Equatorial Guinea;Malabo;28051;1222442;Africa
+Eritrea;Asmara;121320;5352000;Africa
+Eswatini;Mbabane;17363;1419623;Africa
+Estonia;Tallinn;45226;1315944;Europe
+Ethiopia;Addis Ababa;1127127;101853000;Africa
+South AFRICA;Pretoria;1219912;55908900;Africa
+South Ossetia;Tskhinval;3900;53532;Asia
+South Sudan;Juba;619745;12733000;Africa
+Jamaica;Kingston;10990;2723000;North America
+Japan;Tokyo;377944;127103388;Asia
+Avdaland;Borama;21374;417311;Africa
+Azawad;Tombouctou;822000;1295000;Africa
+Azad Jammu and Kashmir;Muzaffarabad;11639;3631224;Asia
+Azania;Dobley;7000;70000;Africa
+Waziristan;Vana;11585;791087;Asia
+Galmudug;Galkayo;46000;1800000;Africa
+State of Wa;Pankan;17000;558000;Asia
+Shan State;Taunji;155800;4702000;Asia
+Jubaland;Kismayo;87000;1300000;Africa
+Donetsk People's Republic;Donetsk;8436;1867000;Europe
+republic of china;Taipei;35980;23516841;Asia
+Luhansk People's Republic;Lugansk;8597;1222950;Europe
+Order of Malta;Maltese Palace;0;10500;Europe
+The Nagorno-Karabakh Republic;Stepanakert;11500;146600;Asia
+Pridnestrovian Moldavian Republic;Tiraspol;4163;475665;Europe
+Puntland;Garoue;212510;3900000;Africa
+Republic of Kosovo;Pristina;10887;1771604;Europe
+Sahrawi Arab Democratic Republic;El Ayoun;266000;584000;Africa
+Sealand;Sealand;0;5;Europe
+Somaliland;Hargeisa;137600;3515380;Africa
+Turkish Republic of Northern Cyprus;Nicosia;3300;313626;Asia
+Himan and Heb;Adado;30000;500000;Africa
+Azores;Ponta Delgada;2346;256746;Africa
+Aland Islands;Mariehamn;1552;30361;Europe
+American Samoa;Pago Pago;199;56400;Australia and Oceania
+Anguilla;Valley;102;16752;North America
+Antarctica;-;14107000;4000;Antarctica
+Aruba;Oranjestad;193;113648;North America
+Bermuda;Hamilton;53;61735;North America
+Bir Tawil;-;2060;0;Africa
+Bonaire;Kralendijk;288;13389;North America
+British Indian Ocean Territory;Diego Garcia;60;2800;Asia
+British Virgin Islands;Rod Town;153;29151;North America
+U.S. Virgin Islands;Charlotte-Amalia;346;102951;North America
+Hawaii;Honolulu;28311;1374810;North America
+Guadeloupe;Bass-Ter;1628;401554;North America
+Guiana;Cayenne;91000;254500;South America
+Guernsey;St. Peter Port;78;62711;Europe
+Gibraltar;Gibraltar;6;33140;Europe
+Golan Heights;El Quneitra;1150;38000;Asia
+Hong Kong;Hong Kong;1104;7346700;Asia
+Greenland;Nuuk;2166086;57728;North America
+Guam;Hagatna;541;159358;Australia and Oceania
+Jersey;St. Helier;116;102700;Europe
+Cayman Islands;Georgetown;264;59054;North America
+Canary Islands;Santa Cruz de Tenerife;7447;2126769;Africa
+Cocos Islands;West Island;14;596;Asia
+Cook Islands;Avarua;237;15200;Australia and Oceania
+Curacao;Willemstad;444;158986;North America
+Madeira;Funchal;801;247161;Africa
+Mayotte;Mamuzu;376;226900;Africa
+Macau;Macau;27;652500;Asia
+Martinique;Fort de France;1128;378200;North America
+Melilla;Melilla;12;65488;Africa
+Montserrat;Plymouth;102;5267;North America
+Niue;Alofi;261;1600;Australia and Oceania
+New Caledonia;Noumea;18575;277000;Australia and Oceania
+Isle of Man;Douglas;572;88195;Europe
+Norfolk Island;Kingston;35;2210;Australia and Oceania
+Christmas Island;Flying Fish Cove;135;2205;Asia
+Pitcairn Islands;Adamstown;47;49;Australia and Oceania
+Islands of Saint Helena, Ascension and Tristan da Cunha;Jamestown;420;5679;Africa
+Puerto Rico;San Juan;9104;3578056;North America
+Reunion;Saint-Denis;2512;843500;Africa
+Saba;Bottom;13;2000;North America
+Northern Mariana Islands;Saipan;463;55700;Australia and Oceania
+Saint Barthelemy;Gustavia;21;9417;North America
+Saint Martin;Marigo;53;36457;North America
+Saint Pierre and Miquelon;Saint-Pierre;242;5595;North America
+Ceuta;Ceuta;18;78320;Africa
+Sint Maarten;Philipsburg;34;39410;North America
+Sint-Eustatius;Oranjestad;21;3100;North America
+Turks and Caicos;Coburn Town;430;36689;North America
+Tokelau;-;10;1411;Australia and Oceania
+Wallis and Futuna;Mata-Utu;274;11800;Australia and Oceania
+Faroe Islands;Torshavn;1399;49188;Europe
+Falkland Islands;Stanley;12173;2932;South America
+French Polynesia;Papeete;4167;273800;Australia and Oceania
+French Southern and Antarctic Territories;Saint-Pierre;7829;200;Africa
+Svalbard;Longyearbyen;61022;1872;Europe
+South Georgia and the South Sandwich Islands;King Edward Point;4066;30;South America

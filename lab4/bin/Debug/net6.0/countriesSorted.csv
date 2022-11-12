@@ -1,0 +1,114 @@
+Country;Capital;Square;Population;Continent
+Iceland;Reykjavik;103000;332529;Europe
+Guatemala;Guatemala;108890;16555556;North America
+Cuba;Havana;110860;11236348;North America
+Bulgaria;Sophia;110910;7153784;Europe
+Liberia;Monrovia;111370;4001855;Africa
+Honduras;Tegucigalpa;112090;8721014;North America
+Benin;Porto Novo;112620;11167000;Africa
+Malawi;Lilongwe;118480;17377468;Africa
+North KOREA;Pyongyang;120540;25281000;Asia
+Eritrea;Asmara;121320;5352000;Africa
+Nicaragua;Managua;129494;6262703;North America
+Greece;Athens;131940;10793526;Europe
+Somaliland;Hargeisa;137600;3515380;Africa
+Nepal;Kathmandu;140800;28431494;Asia
+Tadjikistan;Dushanbe;143100;8551000;Asia
+Bangladesh;Dhaka;144000;160221000;Asia
+Shan State;Taunji;155800;4702000;Asia
+Suriname;Paramaribo;163270;558773;South America
+Tunisia;Tunisia;163610;11154372;Africa
+Uruguay;Montevideo;176220;3480222;South America
+Cambodia;Phnom Penh;181040;15827000;Asia
+Syria;Damascus;185180;17185170;Asia
+Senegal;Dakar;196190;14799859;Africa
+Kyrgyzstan;Bishkek;198500;6019500;Asia
+Belarus;Minsk;207595;9498400;Europe
+Puntland;Garoue;212510;3900000;Africa
+Guyana;Georgetown;214970;741962;South America
+Uganda;Kampala;236040;36860700;Africa
+Laos;Vientiane;236800;6492400;Asia
+Romania;Bucharest;237500;19759968;Europe
+Ghana;Accra;238540;28308301;Africa
+Guinea;Conakry;245857;10628972;Africa
+Sahrawi Arab Democratic Republic;El Ayoun;266000;584000;Africa
+Gabon;Libreville;267667;1811079;Africa
+New Zealand;Wellington;268680;4722321;Australia and Oceania
+Burkina Faso;Ouagadougou;274200;19034397;Africa
+Ecuador;Quito;283560;16599593;South America
+Philippines;Manila;300000;102980480;Asia
+Italy;Rome;301340;60665551;Europe
+Oman;Muscat;309500;4523401;Asia
+Poland;Warsaw;312685;37967209;Europe
+Ivory Coast;Yamoussoukro;322460;23254000;Africa
+Vietnam;Hanoi;329560;91713300;Asia
+Malaysia;Kuala Lumpur;329750;31790277;Asia
+Finland;Helsinki;337030;5487308;Europe
+Republic of the Congo;Brazzaville;342000;4741000;Africa
+Germany;Berlin;357021;82175684;Europe
+Japan;Tokyo;377944;127103388;Asia
+Norway;Oslo;385186;5213985;Europe
+Zimbabwe;Harare;390580;15967000;Africa
+Paraguay;Asuncion;406750;6854536;South America
+Iraq;Baghdad;437072;37883543;Asia
+Morocco;Rabat;446550;34817000;Africa
+Uzbekistan;Tashkent;447400;31807000;Asia
+Sweden;Stockholm;449964;9851017;Europe
+Papua New Guinea;Port Moresby;463840;8151300;Australia and Oceania
+Cameroon;Yaunde;475440;23924000;Africa
+Turkmenistan;Ashgabat;491200;5439000;Asia
+Spain;Madrid;497304;46438422;Europe
+Thailand;Bangkok;514000;68147000;Asia
+Yemen;Sana;527970;27478000;Asia
+France;Paris;547030;64513242;Europe
+Ukraine;Kyiv;576604;42650186;Europe
+Kenya;Nairobi;582650;44156577;Africa
+Madagascar;Antananarivo;587040;24430325;Africa
+Botswana;Gaborone;600370;2209208;Africa
+South Sudan;Juba;619745;12733000;Africa
+TSAR;Bangi;622984;5277959;Africa
+Somalia;Mogadishu;637657;12316895;Africa
+Afghanistan;Kabul;647500;29822848;Asia
+Myanmar;Naypyidaw;678500;51419420;Asia
+Zambia;Lusaka;752614;16717000;Africa
+Chile;Santiago;756950;18006407;South America
+Turkey;Ankara;780580;78741053;Asia
+Mozambique;Maputo;801590;26423623;Africa
+Azawad;Tombouctou;822000;1295000;Africa
+Namibia;Windhoek;825418;2436469;Africa
+Pakistan;Islamabad;881913;196174380;Asia
+Venezuela;Caracas;912050;31028637;South America
+Nigeria;Abuja;923768;186988000;Africa
+Tanzania;Dodoma;948087;50142938;Africa
+Egypt;Cairo;1001450;91701723;Africa
+Mauritania;Nouakchott;1030700;3537368;Africa
+Bolivia;Sucre;1098580;10985059;South America
+Ethiopia;Addis Ababa;1127127;101853000;Africa
+Colombia;Bogota;1138910;48892070;South America
+South AFRICA;Pretoria;1219912;55908900;Africa
+Mali;Bamako;1240000;18135000;Africa
+Angola;Luanda;1246700;25831000;Africa
+Niger;Niamey;1267000;20715000;Africa
+Chad;N 'Djamena;1284000;14497000;Africa
+Peru;Lima;1285220;31488625;South America
+Mongolia;Ulaanbaatar;1564116;3081677;Asia
+Iran;Tehran;1648000;80840713;Asia
+Libya;Tripoli;1759540;6244174;Africa
+Sudan;Khartoum;1886068;41176000;Africa
+Indonesia;Jakarta;1904556;255461700;Asia
+Mexico;Mexico City;1972550;122273473;North America
+Greenland;Nuuk;2166086;57728;North America
+Saudi Arabia;Riyadh;2218000;31015999;Asia
+DR Congo;Kinshasa;2345410;85026000;Africa
+Algeria;Algeria;2381740;39813722;Africa
+Kazakhstan;Nur-Sultan;2724900;17753200;Asia
+Argentina;Buenos Aires;2766890;43847000;South America
+India;New Delhi;3287590;1268961000;Asia
+Australia;Canberra;7686850;24238610;Australia and Oceania
+Brazil;Brasilia;8511965;206081432;South America
+USA;Washington;9522057;322762018;North America
+China;Beijing;9640821;1410549741;Asia
+Canada;Ottawa;9976139;36286425;North America
+Antarctica;-;14107000;4000;Antarctica
+Russia;Moscow;17102345;146544700;Europe
+Great Britain;London;24482065;341183;Europe

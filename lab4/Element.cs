@@ -4,6 +4,7 @@ internal readonly struct Element : IComparable
 {
     public object Value { get; }
     private ColumnType Type { get; }
+
     public Element(string value, ColumnType type)
     {
         Type = type;
@@ -22,22 +23,12 @@ internal readonly struct Element : IComparable
 
     public int CompareTo(object? obj)
     {
-        if (obj is Element otherElement)
-        {
-            if (Type == otherElement.Type)
-            {
-                IComparable value1 = (IComparable)Value;
-                IComparable value2 = (IComparable)otherElement.Value;
-                return value1.CompareTo(value2);
-            }
-            else
-            {
-                throw new Exception("Попытка сравнить элементы, хронящие разные типы данных");
-            }
-        }
-        else
-        {
-            throw new Exception("Нельзя сравнить с другими типами");
-        }
+        if (obj is not Element otherElement) throw new Exception("Нельзя сравнить с другими типами");
+        if (Type != otherElement.Type) throw new Exception("Попытка сравнить элементы, хрaнящие разные типы данных");
+        
+        var value1 = (IComparable)Value;
+        var value2 = (IComparable)otherElement.Value;
+        
+        return value1.CompareTo(value2);
     }
 }

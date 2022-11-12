@@ -8,19 +8,19 @@ public static class SecondTask
         string? attributeName = null;
         string ascendingString = "1";
         string sorterType = "2";
-        Ui.AskUser(ref nameFile, ref attributeName, ref ascendingString, ref sorterType);
+        int time = Ui.AskUser(ref nameFile, ref attributeName, ref ascendingString, ref sorterType);
         TableWorker inputTable = new TableWorker(nameFile + ".csv");
         string outputFile = nameFile + "Sorted.csv";
         bool ascending = int.Parse(ascendingString) == 1;
         SortType sortType = (SortType)(int.Parse(sorterType) - 1);
-
-        Condition condition = Ui.AskCondition(inputTable);
-
+        
+        Condition? condition = Ui.AskCondition(inputTable);
+        
         if (condition != null)
         {
             TableWorker.GetFilteredTable(inputTable, "temp.csv", condition);
             inputTable = new TableWorker("temp" + ".csv");
         }
-        inputTable.GetSortedTable(outputFile, ascending, attributeName, sortType);
+        inputTable.GetSortedTable(outputFile, ascending, attributeName, sortType, time);
     }
 }
