@@ -134,7 +134,7 @@ namespace lab4;
                     string directoryPath = "temp";
 
                     SplitIntoTablesNaturally(directoryPath, attributeNum, ascending, time);
-
+                    
                     string newDirectoryPath = directoryPath;
                     int j = 0;
                     do
@@ -155,9 +155,9 @@ namespace lab4;
                         }
                         j++;
                     } while (Directory.GetFiles(newDirectoryPath).Length > 1);
-
+                    
                     File.Copy(Directory.GetFiles(newDirectoryPath)[0], outputPath, true);
-
+                    
                     return new TableWorker(outputPath);
                 }
                 case SortType.Multipath:
@@ -166,7 +166,7 @@ namespace lab4;
 
                     SplitIntoTablesNaturally(directoryPath, attributeNum, ascending, time);
                     MergeSortedTables(outputPath, Directory.GetFiles(directoryPath), attributeNum, ascending, time);
-
+                    
                     return new TableWorker(outputPath);
                 }
                 default:
@@ -182,13 +182,29 @@ namespace lab4;
                 Console.WriteLine($"Создаем 2 файла:{path1} и {path2}");
                 Console.WriteLine("Заполняем файлы делением корневого файла");
                 SplitIntoTwoTableDirectly(path1, path2);
+                PrintFile(path1);
+                PrintFile(path2);
                 Thread.Sleep(time);
                 TableWorker table1 = new TableWorker(path1);
                 TableWorker table2 = new TableWorker(path2);
                 table1.SubSortDirectly(path1, ascending, columnNum, depth + 1, time);
                 table2.SubSortDirectly(path2, ascending, columnNum, depth + 1, time);
                 MergeSortedTables(outputPath, new[] { path1, path2 }, columnNum, ascending, time);
+                PrintFile(outputPath);
             }
+        }
+
+        void PrintFile(string path)
+        {
+            Console.WriteLine();
+            
+            Console.WriteLine("файл " + path + ":");
+            foreach (var line in File.ReadAllLines(path))
+            {
+                Console.WriteLine(line);
+            }
+
+            Console.WriteLine();
         }
 
         void SplitIntoTwoTableDirectly(string outputPath1, string outputPath2)
@@ -200,7 +216,7 @@ namespace lab4;
 
             TableWorker table1 = new TableWorker(outputPath1, this);
             TableWorker table2 = new TableWorker(outputPath2, this);
-
+            
             StreamWriter file1 = new StreamWriter(outputPath1);
             StreamWriter file2 = new StreamWriter(outputPath2);
             StreamReader originFile = new StreamReader(_filePath);
@@ -225,7 +241,7 @@ namespace lab4;
             file1.Close();
             file2.Close();
             originFile.Close();
-            
+
             table1.RowCount = RowCount / 2 + RowCount % 2;
             table2.RowCount = RowCount / 2;
         }
@@ -284,7 +300,7 @@ namespace lab4;
 
                 currentFile.Close();
                 tables[j].RowCount = rowCount;
-                
+                PrintFile(path);
                 j++;
             }
 
@@ -365,7 +381,8 @@ namespace lab4;
             foreach (var file in files)
                 file.Close();
             outputFile.Close();
-
+            PrintFile(outputPath);
+            
             int GetMinOrMaxElementNum(Element[][] element)
             {
                 Element[] currentLine = null!;

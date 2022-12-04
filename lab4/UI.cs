@@ -15,7 +15,7 @@ static class Ui
             sorterType = Console.ReadLine()!;
             Console.WriteLine("Введите длительность задержки в миллисекундах: \n1000 миллисекунд = 1 секунда");
             var time = Console.ReadLine();
-            return time!.Length == 0 ? 0 : Convert.ToInt32(Console.ReadLine());
+            return time!.Length == 0 ? 0 : Convert.ToInt32(time);
         }
 
         public static Condition? AskCondition(TableWorker table)
