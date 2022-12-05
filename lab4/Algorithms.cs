@@ -63,7 +63,7 @@ public static class Algorithms
             }
             Console.WriteLine($"Меняем его с элементом {i} месте");
             Helper.PrintWithHighlight(array,min,i);
-            foreach (var k in array)
+            foreach (var unused in array)
             {
                 Console.Write(" ↓ ");
             }
@@ -93,7 +93,7 @@ public static class Algorithms
         
         (array[marker], array[end]) = (array[end], array[marker]);
         Console.WriteLine("Расставляем все элементы меньше опорного слева, а больше - справа");
-        Helper.PrintWithHighlightLeftRight(array, marker);
+        Helper.PrintWithHighlightLeftRight(array, marker, start, end);
         Thread.Sleep(time);
         
         return marker;

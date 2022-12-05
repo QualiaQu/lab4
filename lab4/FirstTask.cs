@@ -29,6 +29,7 @@ public static class FirstTask
                     break;
                 case "2":
                     Algorithms.QuickSort(arr, 0,arr.Length - 1, time);
+                    
                     break;
                 default:
                     Console.WriteLine("Попробуйте ещё разок");
