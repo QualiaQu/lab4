@@ -56,17 +56,23 @@ public static class Helper
                 Console.Write(", ");
                 continue;
             }
-            if (i == index2)
+            if (i == index2 && i != arr.Length)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
                 Console.Write(arr[i]);
                 Console.ForegroundColor = ConsoleColor.White;
-                Console.Write("");
-                
+                Console.Write(", ");
+                continue;
+            }
+            if (i == index2 && i == arr.Length)
+            {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.Write(arr[i]);
+                Console.ForegroundColor = ConsoleColor.White;
             }
             else
             {
-                Console.Write(arr[i]);
+                Console.Write(arr[i] + ", ");
             }
         }
         Console.Write("\n");
