@@ -226,7 +226,6 @@ namespace lab4;
             int j = 0;
             while (!originFile.EndOfStream)
             {
-                
                 if (j % 2 == 0)
                 {
                     file1.WriteLine(originFile.ReadLine());
